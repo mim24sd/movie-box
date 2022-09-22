@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+}
+
+p,
+h1,
+h2,
+span {
+  font-family: var(--primaryFont);
+}

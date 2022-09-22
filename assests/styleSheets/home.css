@@ -1,0 +1,51 @@
+@import "./variables.css";
+
+.web-title{
+  text-align: center;
+}
+
+.movie-box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.movie-box {
+  position: relative;
+}
+
+.movie-box-image {
+  display: block;
+  width: 100%;
+}
+
+.movie-box-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s;
+  background-color: var(--darkColor);
+}
+
+.movie-box:hover .movie-box-overlay {
+  opacity: 0.5;
+}
+
+.movie-box-detail {
+  color: var(--lightColor);
+  text-size-adjust: auto;
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  text-align: left;
+}
+
+@media screen and (min-device-width: 450px) and (max-device-width: 820px) {
+  .movie-box-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
