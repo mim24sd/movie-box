@@ -18,5 +18,5 @@
   --space-xl: calc(3 * var(--space-unit));
 
   /* fonts */
-  --primaryFont: "Oxygen", sans-serif;
+  --primaryFont: "Roboto", sans-serif;
 }

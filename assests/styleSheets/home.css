@@ -1,12 +1,18 @@
 @import "./variables.css";
 
-.web-title{
+.movie-box-title {
+  margin-bottom: var(--size-md);
+}
+
+.web-title {
   text-align: center;
+  padding: var(--size-md);
 }
 
 .movie-box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  list-style-type: none;
 }
 
 .movie-box {
@@ -42,10 +48,4 @@
   top: 80%;
   left: 10%;
   text-align: left;
-}
-
-@media screen and (min-device-width: 450px) and (max-device-width: 820px) {
-  .movie-box-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
 }
