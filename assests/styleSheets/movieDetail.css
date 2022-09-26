@@ -1,0 +1,68 @@
+@import "./variables.css";
+
+body {
+  background-image: linear-gradient(to bottom, var(--noColor), var(--darkColor)),
+    url("../images/luca-background.png");
+  background-size: cover;
+  color: var(--lightColor);
+  margin: 0;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.details-container {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  position: unset;
+  bottom: unset;
+  padding: 0 var(--size-lg) var(--size-lg) var(--size-lg);
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+.cover-image {
+  width: 700px;
+  border: solid;
+  border-color: var(--lightColor);
+  margin-right: var(--size-md);
+}
+
+.detail-text {
+  align-self: self-end;
+  margin-bottom: var(--size-md);
+}
+
+.detail-text-header {
+  display: flex;
+}
+
+.movie-rate {
+  color: var(--errorColor);
+  font-weight: bold;
+  align-self: center;
+  margin-left: var(--size-md);
+}
+
+@media screen and (min-device-width: 450px) {
+  main {
+    display: flex;
+  }
+
+  .details-container {
+    max-width: 1000px;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .cover-image {
+    width: 400px;
+  }
+}

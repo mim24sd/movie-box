@@ -1,7 +1,9 @@
 :root {
   /* colors */
-  --darkColor: #000000;
-  --lightColor: #ffffff;
+  --darkColor: black;
+  --lightColor: white;
+  --noColor: rgba(245, 246, 252, 0);
+  --errorColor: red;
 
   /* sizes */
   --size-unit: 1em;
