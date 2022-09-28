@@ -1,12 +1,19 @@
 @import "./variables.css";
+@import "./reset.css";
+
+body {
+  font-family: var(--primaryFont);
+  margin: 0;
+}
 
 .movie-box-title {
-  margin-bottom: var(--size-md);
+  margin-bottom: var(--space-lg);
+  font-size: var(--size-lg);
 }
 
 .web-title {
   text-align: center;
-  padding: var(--size-md);
+  padding: var(--space-xl);
 }
 
 .movie-box-container {
@@ -43,7 +50,6 @@
 
 .movie-box-detail {
   color: var(--lightColor);
-  text-size-adjust: auto;
   position: absolute;
   top: 80%;
   left: 10%;
