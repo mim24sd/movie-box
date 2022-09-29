@@ -2,32 +2,28 @@
 <html lang="en">
   <head>
     <title>Movie Box</title>
-    <link rel="stylesheet" href="./assests/styleSheets/movieDetail.css" >
+    <link rel="stylesheet" href="./assests/styleSheets/movieDetail.css" />
   </head>
   <body>
-    <main>
-      <div class="details-container">
-        <section>
-          <h1>Movies</h1>
-          <img
-            src="./assests/images/luca-cover.jpeg"
-            alt="luca animation cover image"
-            class="cover-image"
-          >
+    <a href="./index.html" class="header-text"><h1>Movies</h1></a>
+    <figure class="main-container" id="movie-detail">
+      <img
+      src="./assests/images/luca-cover.jpeg"
+      alt="Movie cover image" class="cover-image" />
+      <figcaption class="detail-text">
+        <section class="detail-text-header">
+          <h2 class="movie-title">Luca</h2>
+          <p class="movie-rate">7/10</p>
         </section>
-        <div class="detail-text">
-          <section class="detail-text-header">
-            <h2>Luca</h2>
-            <span class="movie-rate">7.8/10</span>
-          </section>
-          <span>
-            This movie is all about life and childrien , This movie is all about
-            life and childrien , This movie is all about life and childrien ,
-            This movie is all about life and childrien...</span
-          >
-        </div>
-      </div>
-    </main>
-    <script src="./assests/javaScript/index.js"></script>
+        <summary class="movie-description">
+          Its good,I like it,Its good,I like it,
+          Its good,I like it,
+          Its good,I like it,
+          Its good,I like it,
+          Its good,I like it,Its good,I like it,Its good,I like it,Its good,I like it,
+        </summary>
+      </figcaption>
+    </figure>
+    <script src="./assests/javaScript/movieDetail.js"></script>
   </body>
 </html>
