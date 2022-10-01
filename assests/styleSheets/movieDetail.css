@@ -1,0 +1,100 @@
+@import "./variables.css";
+@import "./reset.css";
+
+body {
+  background-image: linear-gradient(to bottom, var(--noColor), var(--darkColor)),
+    url("../images/luca-background.png");
+  background-size: cover;
+  color: var(--lightColor);
+  font-family: var(--primaryFont);
+  line-height: 1.2;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.header-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: var(--space-xxl) 0 0 var(--space-xxl);
+  font-size: var(--size-xxl);
+  font-weight: bolder;
+}
+
+.main-container {
+  padding: var(--space-xxl);
+  min-height: max-content;
+  display: grid;
+}
+
+.cover-image {
+  width: 700px;
+  border: solid;
+  border-color: var(--lightColor);
+}
+
+.detail-text {
+  align-self: self-end;
+  margin: var(--space-xxl) 0 0 0;
+}
+
+.detail-text-header {
+  margin: var(--space-xxl) 0;
+  display: flex;
+}
+
+.movie-title {
+  font-size: var(--size-xxl);
+  max-width: 500px;
+  font-weight: bold;
+}
+
+.movie-rate {
+  color: var(--errorColor);
+  font-size: var(--size-xxl);
+  font-weight: bold;
+  align-self: flex-end;
+  margin-left: var(--space-xl);
+}
+
+.movie-description {
+  max-width: 700px;
+}
+
+@media screen and (min-device-width: 450px) {
+  .main-container {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+  .cover-image {
+    width: 400px;
+  }
+
+  .detail-text {
+    margin: 0 var(--space-xl) var(--space-xl) var(--space-xl);
+  }
+
+  .detail-text-header {
+    margin: 0 0 var(--space-lg) 0;
+    display: flex;
+  }
+
+  .movie-description {
+    max-width: 800px;
+  }
+
+  .movie-title {
+    font-size: var(--size-xl);
+    max-width: max-content;
+  }
+
+  .movie-rate {
+    font-size: var(--size-lg);
+    font-weight: bold;
+  }
+}
