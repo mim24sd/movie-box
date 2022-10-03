@@ -1,14 +1,16 @@
 const movieList = document.getElementById("movie-list");
-let markUp = "";
+const apiKey = d2aa1d6a7ef9316cd7e2270dd937b843;
 
 fetch(
-  `https://api.themoviedb.org/3/movie/top_rated?api_key=d2aa1d6a7ef9316cd7e2270dd937b843&language=en-US&page=1`
+  `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`
 )
   .then((res) => res.json())
   .then((data) => showMovies(data.results))
-  .catch((error) => console.log(`error: ${error}`));
+  .catch((error) => alert(`error: ${error}`));
 
 function showMovies(movies) {
+  let markUp = "";
+
   movies.forEach((movie) => {
     markUp = `<li class="movie-box" id="movie-box">
       <a href="./movieDetail.html?${queryParam(movie)}" }>
