@@ -1,5 +1,5 @@
 const movieList = document.getElementById("movie-list");
-const apiKey = d2aa1d6a7ef9316cd7e2270dd937b843;
+const apiKey = "d2aa1d6a7ef9316cd7e2270dd937b843";
 
 fetch(
   `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`
