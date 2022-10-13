@@ -1,19 +1,26 @@
 const movieList = document.getElementById("movie-list");
 const apiKey = "d2aa1d6a7ef9316cd7e2270dd937b843";
 
-fetch(
-  `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`
-)
-  .then((res) => res.json())
-  .then((data) => showMovies(data.results))
-  .catch((error) => showErrorMessage());
+async function fetchMovieList() {
+  try {
+    fetch(
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`
+    )
+      .then((res) => res.json())
+      .then((data) => showMovies(data.results));
+  } catch (erorr) {
+    showErrorMessage();
+  }
+}
+
+fetchMovieList();
 
 function showMovies(movies) {
   let markUp = "";
 
   movies.forEach((movie) => {
     markUp = `<li class="movie-box" id="movie-box">
-      <a href="./movieDetail.html?${queryParam(movie)}" }>
+      <a href="./movieDetail.html?${movie.id}" }>
         <img
           src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
           alt="Movie cover image"
@@ -30,14 +37,6 @@ function showMovies(movies) {
 
     movieList.innerHTML += markUp;
   });
-}
-
-function queryParam(movie) {
-  return Object.keys(movie)
-    .map((key) => {
-      return `${key}=${encodeURIComponent(movie[key])}`;
-    })
-    .join("&");
 }
 
 function showErrorMessage() {
