@@ -3,11 +3,13 @@ const apiKey = "d2aa1d6a7ef9316cd7e2270dd937b843";
 
 async function fetchMovieList() {
   try {
-    fetch(
+    const fetchedData = await fetch(
       `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`
-    )
-      .then((res) => res.json())
-      .then((data) => showMovies(data.results));
+    );
+
+    const movieList = await fetchedData.json();
+
+    showMovies(movieList.results);
   } catch (erorr) {
     showErrorMessage();
   }
