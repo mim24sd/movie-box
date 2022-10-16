@@ -10,7 +10,7 @@ async function fetchMovieList() {
     const movieList = await fetchedData.json();
 
     showMovies(movieList.results);
-  } catch (erorr) {
+  } catch {
     showErrorMessage();
   }
 }
@@ -21,8 +21,8 @@ function showMovies(movies) {
   let markUp = "";
 
   movies.forEach((movie) => {
-    markUp = `<li class="movie-box" id="movie-box">
-      <a href="./movieDetail.html?${movie.id}" }>
+    markUp += `<li class="movie-box" id="movie-box">
+      <a href="./movieDetail.html?id=${movie.id}" }>
         <img
           src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
           alt="Movie cover image"
@@ -36,14 +36,11 @@ function showMovies(movies) {
         </div>
       </a>
 </li>`;
-
-    movieList.innerHTML += markUp;
   });
+
+  movieList.innerHTML = markUp;
 }
 
 function showErrorMessage() {
-  let markUp = "";
-
-  markUp = `<p class="error-message">Somthing went wrong.Please,refresh the page.</p>`;
-  movieList.innerHTML = markUp;
+  movieList.innerHTML = `<p class="error-message">Somthing went wrong.Please,refresh the page.</p>`;
 }
