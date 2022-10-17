@@ -1,7 +1,7 @@
 const movieSection = document.getElementById("movie-detail");
 
 const urlSearchParams = new URLSearchParams(window.location.search);
-const movie_id = Object.fromEntries(urlSearchParams.entries()).id;
+const movie_id = urlSearchParams.get("id");
 
 const apiKey = "d2aa1d6a7ef9316cd7e2270dd937b843";
 
