@@ -1,14 +1,14 @@
 const movieSection = document.getElementById("movie-detail");
 
 const urlSearchParams = new URLSearchParams(window.location.search);
-const movie_id = urlSearchParams.get("id");
+const movieId = urlSearchParams.get("id");
 
 const apiKey = "d2aa1d6a7ef9316cd7e2270dd937b843";
 
 async function fetchMovieDetails() {
   try {
     const fetchedData = await fetch(
-      `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apiKey}&language=en-US`
+      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`
     );
 
     const movieDtails = await fetchedData.json();
