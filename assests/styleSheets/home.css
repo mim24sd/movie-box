@@ -29,7 +29,6 @@ body {
 .movie-box-image {
   display: block;
   width: 100%;
-  height: auto;
 }
 
 .movie-box-overlay {
