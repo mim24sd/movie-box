@@ -20,8 +20,9 @@ yarn parcel index.html
 
 ## Lighthouse report
 
-for web :
+for desktop :
 ![result for desktop](./assests/images/lightHouse/desktop.pdf "result for desktop")
+for mobile :
 ![result for mobile](./assests/images/lightHouse/mobile.pdf "result for mobile")
 
 ## Support
