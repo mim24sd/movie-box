@@ -18,6 +18,12 @@ yarn add --dev parcel;
 yarn parcel index.html
 ```
 
+## Lighthouse report
+
+for web :
+![result for desktop](./assests/images/lightHouse/desktop.pdf "result for desktop")
+![result for mobile](./assests/images/lightHouse/mobile.pdf "result for mobile")
+
 ## Support
 
 You can always find me in [Linkdin](https://www.linkedin.com/in/shamim-sedghi-b026a2207/) .
