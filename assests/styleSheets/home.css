@@ -29,7 +29,7 @@ body {
 .movie-box-image {
   display: block;
   width: 100%;
-  min-height: auto;
+  height: auto;
 }
 
 .movie-box-overlay {
