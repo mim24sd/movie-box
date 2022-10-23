@@ -28,8 +28,8 @@ body {
 
 .movie-box-image {
   display: block;
-  min-width: 100%;
-  height: auto;
+  width: 100%;
+  min-height: auto;
 }
 
 .movie-box-overlay {
