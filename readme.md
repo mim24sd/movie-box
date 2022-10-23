@@ -8,22 +8,21 @@ When you click on each movie, you get the details of that.
 First of all you need to add packages,I've been added to this project:
 
 ```bash
-yarn add;
+yarn install;
 ```
 
 Then if you like, you can run the project by [parcel](https://parceljs.org/)
 
 ```bash
-yarn add --dev parcel;
-yarn parcel index.html;
+yarn run build;
 ```
 
 ## Lighthouse report
 
 for desktop :
-![result for desktop](./assests/images/lightHouse/desktop.pdf "result for desktop")</br>
+![result for desktop](./assests/lightHouse/desktop.pdf "result for desktop")</br>
 for mobile :
-![result for mobile](./assests/images/lightHouse/mobile.pdf "result for mobile")
+![result for mobile](./assests/lightHouse/mobile.pdf "result for mobile")
 
 ## Support
 
