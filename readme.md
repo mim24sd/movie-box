@@ -5,16 +5,16 @@ When you click on each movie, you get the details of that.
 
 ## Installation
 
-First of all you need to add packages,I've been added to this project:
+First of all you need to install packages,I've been added to this project:
 
 ```bash
-yarn install;
+yarn install
 ```
 
-Then if you like, you can run the project by [parcel](https://parceljs.org/)
+Then if you like, you can build the project by [parcel](https://parceljs.org/)
 
 ```bash
-yarn run build;
+yarn run build
 ```
 
 ## Lighthouse report
